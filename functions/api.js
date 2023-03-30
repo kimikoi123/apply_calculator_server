@@ -74,9 +74,11 @@ router.delete("/app/histories", async (req, res) => {
     }
 })
 
-// router.listen(process.env.SERVER_URL, () => {
-//   console.log("server has started")
-// })
+router.get('/', (req, res) => {
+  res.json({
+    'hi' : 'hello'
+  })
+})
 
 
 app.use('/.netlify/functions/api',router)
