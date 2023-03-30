@@ -7,8 +7,8 @@ const pool = require("./db")
 
 const router = express.Router()
 
-app.use(cors())
-app.use(express.json())
+router.use(cors())
+router.use(express.json())
 
 router.post("/app/user", async (req, res) => {
   try {
